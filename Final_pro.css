@@ -1,0 +1,662 @@
+*{
+    font-family: sans-serif, arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and margin don't break layout */
+}
+body{
+    background-color: aliceblue;
+}
+.logo{
+    width: 100px;
+    height: auto;
+}
+header{
+    position: sticky;
+}
+nav{
+    position: sticky;
+    display: flex;
+    top: 0;
+    justify-content: space-evenly;
+    background-color: aliceblue;
+    height: 20vh;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+}
+.si{
+    width: 160px; /* Make it a bit wider for readability */
+    height: auto;
+    padding: 10px 40px; /* Adjust padding for better balance */
+    background-color: #3b82f680;
+    color: aliceblue;
+    border: 2px solid #3b82f680; /* Explicitly set border width and color */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    font-size: 30px; /* Increase text size for readability */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add smooth transition for hover effects */
+}
+.si:hover {
+    background-color: aliceblue;/* Change background color on hover */
+    color: #3b82f680;
+    border-color:#3b82f680;
+}
+.su {
+    width: 160px;
+    padding: 10px 50px;
+    height: auto;
+    background-color: aliceblue;
+    text-decoration: none; /* Remove underline */
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+    transition: 0.4s ease, transform 0.1s ease; /* Corrected the duration period */
+}
+
+.su:hover {
+    box-shadow: 0px 3px 0px 3px rgba(40, 39, 39, 0.2); /* Added box-shadow values */
+}
+.title-container {
+    text-align: right;
+    margin: 20px;
+    position: relative; /* Allows you to adjust position relative to its normal flow */
+    top: 250px; /* Moves the container down 20px */
+    right: 100px; /* Moves the container 30px to the right */
+}
+
+.title {
+    font-size: 4em;
+    text-align: right;
+    position: absolute;
+    top: 80px;
+    right: -120px;
+}
+.image1 {
+    width: 600px;
+    height: auto;
+    position: absolute;
+    top: 310px;
+    display: block; /* Makes the image behave like a block element */
+}
+
+.line {
+    height: 2px; /* Set the height of the line */
+    background-color: rgb(17 186 240); /* Line color */
+    position: relative;
+    left: 600px;
+    width: 15%; /* Control the width of the line */
+    margin: 20px auto; /* Center the line horizontally and add space above/below */
+}
+.start, .books {
+    display: inline-block; /* Treat as inline blocks */
+    width: 300px;
+    padding: 20px 40px;
+    margin: 20px 0;
+    background-color: rgb(17, 186, 240);
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.start:hover, .books:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.books {
+    background-color: #7d8edfd3;
+}
+
+.books:hover {
+    background-color: aliceblue;
+    color: #7d8edfd3;
+    border: 2px solid #7d8edfd3;
+}
+
+.line2{
+    height: 2px; /* Set the height of the line */
+    background-color: rgb(0, 0, 0); /* Line color */
+    position: relative;
+    left: 600px;
+    width: 6%; /* Control the width of the line */
+    margin: 10px auto;
+}
+
+h1 {
+    font-size: 4em; /* Increase font size */
+    color: #3b82f6; /* Change the text color */
+    margin: 250px;
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Ensure text is centered inside the section */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+    cursor: pointer; /* Change the cursor to pointer on hover */
+}
+
+h1:hover {
+    transform: scale(1.1); /* Enlarge slightly on hover */
+    color: #8e7ac5; /* Change color on hover */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
+}
+/* Container for the images and cards */
+.img-co {
+    display: flex;
+    justify-content: center; /* Horizontally center the images */
+    align-items: center; /* Vertically center the images */
+    gap: 270px; /* Space between the images */
+    margin-bottom: 70px; /* Space between images and cards */
+}
+
+/* Individual image containers */
+.img-item {
+    width: 45px; /* Adjust size as needed */
+    height: 110px; /* Adjust size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure images fit well within their containers */
+.img-item img {
+    width:250px;
+    height: auto;
+    display: block;
+}
+
+/* Container for the cards */
+.card-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the cards */
+    align-items: center; /* Vertically center the cards */
+    height: auto; /* Adjust height as needed */
+    flex-wrap: wrap; /* Allow cards to wrap if needed */
+    gap: 40px; /* Space between the cards */
+}
+
+/* Card styles */
+.card {
+    width: 300px;
+    height: 254px;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Inner card with solid background */
+.card2 {
+    width: 300px;
+    height: 254px;
+    background-color: #73d3e9;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+/* Scale the inner card on hover */
+.card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+}
+
+/* Outer card hover effect with colorful glow */
+.card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+    border-radius: 20px;
+}
+.card {
+    width: 300px;
+    height: 200px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    border-radius: 8px;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    cursor: pointer;
+}
+
+.card5 {
+    position: relative;
+    width: 190px;
+    height: 254px;
+    background-color: #6ab5e3;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.card5::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -5px;
+    margin: auto;
+    width: 200px;
+    height: 264px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card5::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+}
+
+.heading {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.card5 p:not(.heading) {
+    font-size: 14px;
+}
+
+.card5 p:last-child {
+    color: #e81cff;
+    font-weight: 600;
+}
+
+.card5:hover::after {
+    filter: blur(30px);
+}
+
+.card5:hover::before {
+    transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+}
+.li{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 0.5px; /* Full viewport height, adjust as needed */
+}
+.img-card{
+    width: 170px;
+    z-index: 60px;
+}
+.img-card2{
+    width: 145px;
+    position: absolute;
+    top: 0%;
+    
+}
+.text-card {
+    display: flex;
+    align-items: center; /* Vertically center */
+    height: 200px; 
+    font-size: 20px;
+    color: black;
+    text-align: center; /* Horizontally center text */
+    font-weight: 700;
+    margin: 0 auto; /* Optional: If you want the block element to be centered in its container */
+}
+/* Basic styling for footer */
+footer {
+    background-color: rgb(6 74 96);
+    color: #fff;
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex-basis: 22%;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-section p,
+.footer-section a,
+.footer-section ul {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section.social a {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #ddd;
+}
+
+.footer-section.social a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 20px;
+}
+@media screen and (max-width : 1440px) and (min-width : 1024px) {
+    nav{
+        height: 10vh;
+        width: 100%;
+    }
+    .title{
+        font-size: 4em;
+        position: absolute;
+        top: 50px;
+        right: -200px;
+    }
+    .title-container{
+        margin: 10px;
+        position: relative; 
+        top: 300px; 
+        right: 50px;
+    }
+    .line{
+        height: 2px; 
+        position: relative;
+        left: 600px;
+        width: 15%; 
+        margin: 10px auto; 
+    }
+    .line2{
+        height: 2px; 
+        position: relative;
+        left: 600px;
+        width: 6%; 
+        margin: 10px auto;
+    }
+    .image1{
+        width: 400px;
+        position: absolute;
+        height: auto;
+        top: 265px;
+    }
+    .text-card{
+        height: 200px; 
+        font-size: 25px;
+        color: black;
+        text-align: center; 
+        font-weight: 700;
+        margin: 0 auto; 
+    }
+}
+@media screen and (max-width : 1024px) and (min-width : 768px){
+    nav{
+        height: 10vh;
+        width: 100%;
+    }
+    .title{
+        font-size: 4em;
+        position: absolute;
+        top: 20px;
+        right: -200px;
+    }
+    .title-container{
+        margin: 5px;
+        position: relative; 
+        top: 300px; 
+        right: 50px;
+    }
+    .line{
+        height: 2px; 
+        position: relative;
+        left: 400px;
+        width: 15%; 
+        margin: 10px auto; 
+    }
+    .line2{
+        height: 2px; 
+        position: relative;
+        left: 350px;
+        width: 6%; 
+        margin: 10px auto;
+    }
+    .image1{
+        width: 300px;
+        position: absolute;
+        top: 250px;
+    }
+    .text-card{
+        height: 250px; 
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0 auto; 
+    }
+    .card5 {
+        position: relative;
+        width: 200px;
+        height: 270px;
+    }
+    .heading{
+        font-size: 25px;
+        text-transform: capitalize;
+        font-weight: 700;
+    }
+    .footer-section h3 {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    
+    .footer-section p,
+    .footer-section a,
+    .footer-section ul {
+        font-size: 25px;
+    }
+    h2{
+        font-size: 27px;
+    }
+    .start, .books {
+        width: 300px;
+        padding: 20px 40px;
+        margin: 20px 0;
+        border-radius: 10px;
+        font-size: 30px;
+    }
+    
+}
+@media screen and (max-width : 768px) and (min-width : 425px){
+    nav{
+        height: 15vh;
+    }
+    .title{
+        position: absolute;
+        top: 70px;
+        right: -290px;
+    }
+    .title-container{
+        margin: 3px;
+        position: relative; 
+        top: 250px; 
+        right: -40px;
+    }
+    .line{
+        height: 5px; 
+        position: relative;
+        left: 600px;
+        width: 15%; 
+        margin: 20px; 
+    }
+    .line2{
+        height: 7px; 
+        position: relative;
+        left: 600px;
+        width: 5%; 
+        margin: 10px;
+    }
+    .image1{
+        width: 200px;
+        position: absolute;
+        height: auto;
+        top: 285px;
+    }
+    .text-card{
+        height: 200px; 
+        font-size: 25px;
+        text-align: center; 
+        font-weight: 700;
+        margin: 5px; 
+    }
+    .card5 {
+        position: relative;
+        width: 250px;
+        height: 270px;
+    }
+    .img-card{
+        width: 170px;
+    }
+    .heading{
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+    .footer-section h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .footer-section p,
+    .footer-section a,
+    .footer-section ul {
+        font-size: 28px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .footer-section.social{
+        gap: 30px;
+        align-items: center;
+    }
+    .start, .books {
+        width: 350px;
+        padding: 25px 45px;
+        margin: 25px;
+        font-size: 50px;
+    }
+    footer{
+        padding: 45px 10;
+    }
+    .si{
+        font-size: 35px; 
+    }
+}
+@media screen and (max-width : 425px) and (min-width : 375px){
+    nav{
+        height: 16vh;
+        width: 700px;
+    }
+    .title{
+        position: absolute;
+        right: -540px;
+    }
+    .title-container{
+        margin: 4px;
+        position: relative; 
+        top: 300px; 
+        right: -300px;
+    }
+    .line{
+        height: 2px; 
+        position: relative;
+        left: 400px;
+        width: 15%; 
+        margin: 10px auto; 
+    }
+    .line2{
+        height: 3px; 
+        position: relative;
+        left: 320px;
+        width: 7%; 
+        margin: 6px;
+    }
+    .image1{
+        width: 100px;
+        position: absolute;
+        top: 250px;
+    }
+    .text-card{
+        height: 250px; 
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0 auto; 
+    }
+    .card5 {
+        position: relative;
+        width: 270px;
+        height: 280px;
+    }
+    .heading{
+        font-size: 30px;
+        text-transform: capitalize;
+        font-weight: 750;
+    }
+    .footer-section h3 {
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+    
+    .footer-section p,
+    .footer-section a,
+    .footer-section ul {
+        font-size: 30px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    .img-card{
+        width: 200px;
+    }
+    
+}
+
